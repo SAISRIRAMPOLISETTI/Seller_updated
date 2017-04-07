@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "745411844837",
+    "firebase_url": "https://sellerlogin-43806.firebaseio.com",
+    "project_id": "sellerlogin-43806",
+    "storage_bucket": "sellerlogin-43806.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:745411844837:android:89f0245f7bbee387",
+        "android_client_info": {
+          "package_name": "com.bizzmark.seller.sellerwithoutlogin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "745411844837-1foqbsj07emf3fl7pr1e6c3o02qqadai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_jn8FoWrlY98MuktQpHnE0Wwt6vIZhVc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

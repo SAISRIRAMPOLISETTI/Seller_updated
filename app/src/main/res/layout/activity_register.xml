@@ -1,72 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.bizzmark.seller.sellerwithoutlogin.login.Login">
+    tools:context="com.bizzmark.seller.sellerwithoutlogin.login.RegisterActivity">
 
-    /*-------------- main header ----------*/
 
+    /*---------- main Header ---------------*/
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@color/colorPrimary"
-        android:id="@+id/newheader"
-        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
         android:layout_alignParentStart="true">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Smart Points Seller New"
-            android:textAlignment="center"
             android:textSize="22dp"
             android:textColor="#000"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="50dp"
-            android:layout_marginRight="32dp"/>
+            android:layout_marginLeft="90dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            android:background="@color/colorPrimary"
+            android:id="@+id/backbutton"
+            android:layout_marginLeft="16dp"/>
 
     </RelativeLayout>
 
-    /*------- Page Title -----*/
+    /*---- Page Title and User Validations(username and password)---*/
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="13dp"
-        android:layout_marginTop="60dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
         android:orientation="vertical"
-        android:id="@+id/linearLayout">
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
 
         <TextView
-            android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=" SELLER LOGIN FORM"
+            android:text="NEW SELLER REGISTRATION FORM"
             android:textSize="20dp"
             android:textStyle="bold"
             android:textAlignment="center"
-            android:layout_marginTop="10dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="25dp"
+            android:layout_gravity="center"
             android:textColor="@color/colorPrimary"/>
     </LinearLayout>
-
-    /*-------  User validations(User Name and Password)-----*/
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
+        android:layout_marginBottom="13dp"
         android:orientation="vertical"
-        android:layout_alignTop="@+id/linearLayout"
-        android:layout_alignStart="@+id/linearLayout">
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
 
         <TextView
             android:layout_width="wrap_content"
@@ -74,9 +81,8 @@
             android:text=" User Name "
             android:textSize="20dp"
             android:textStyle="bold"
-            android:textAlignment="center"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="60dp"/>
+            android:layout_marginTop="80dp"/>
 
         <EditText
             android:layout_width="match_parent"
@@ -87,7 +93,7 @@
             android:background="@drawable/loginbox"
             android:drawableLeft="@drawable/ic_id"
             android:inputType="textEmailAddress"
-            android:id="@+id/etusername"/>
+            android:id="@+id/etnewusername"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -97,7 +103,7 @@
             android:textStyle="bold"
             android:textAlignment="center"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="20dp"/>
+            android:layout_marginTop="30dp"/>
 
         <EditText
             android:layout_width="match_parent"
@@ -108,55 +114,44 @@
             android:background="@drawable/loginbox"
             android:drawableLeft="@drawable/ic_password"
             android:inputType="textPassword"
-            android:id="@+id/etpassword"/>
+            android:id="@+id/etnewpassword"/>
 
         <Button
             android:layout_width="190dp"
             android:layout_height="wrap_content"
-            android:text="LogIn"
-            android:layout_marginLeft="0dp"
-            android:layout_marginTop="25dp"
+            android:text="register"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="30dp"
             android:textAlignment="center"
-            android:id="@+id/btlogin"
-            android:layout_gravity="center"/>
+            android:id="@+id/btregister"/>
 
-        /*--- If new user goto register activity----*/
+        /*----If user is already registered going into login Activity ----*/
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
+            android:layout_marginBottom="13dp"
             android:orientation="vertical"
-            android:layout_alignTop="@+id/linearLayout"
-            android:layout_alignStart="@+id/linearLayout">
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Don't have account? SignUp here "
+                android:text="You have account? SignIn here "
                 android:textAlignment="center"
                 android:textSize="18dp"
                 android:layout_marginLeft="0dp"
-                android:layout_marginTop="15dp"
-                android:id="@+id/tvsignup"
+                android:layout_marginTop="5dp"
+                android:id="@+id/tvsignin"
                 android:layout_gravity="center"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="forget password ?"
-                android:textSize="18dp"
-                android:textAlignment="center"
-                android:layout_gravity="center"
-                android:layout_marginTop="15dp"
-                android:textColor="#08e31e"
-                android:id="@+id/tvforget"/>
 
         </LinearLayout>
 
     </LinearLayout>
 
 </RelativeLayout>
-
-
